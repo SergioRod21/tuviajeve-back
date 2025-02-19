@@ -6,11 +6,7 @@ config();
 
 const app = express();
 
-app.use(cors({
-  origin: 'https://tuviajeve-front-production.up.railway.app/', // Reemplaza con la URL de tu frontend
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-}));
+app.use(cors());
 app.use(express.json());
 
 function getCurrentTimeInTimezone() {
